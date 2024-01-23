@@ -1,0 +1,36 @@
+body{
+    font-family: Arial;
+}
+
+form{
+    background-color: wheat;
+    padding: 8px;
+}
+
+h1{
+    text-align: center;
+    background-color: orangered;
+    color: white;
+}
+
+p{
+    margin: 0 0 0 230px;
+    color: blue;
+}
+
+.input{
+    margin: 25px;
+}
+
+.hobby-checkbox{
+    margin: -20px 0 5px 300px;
+    color: red;
+}
+
+.hobby-btn{
+    margin: 8px 0 5px 300px;
+}
+
+.form-item{
+    margin: -20px 0px 0px 0px;
+}
