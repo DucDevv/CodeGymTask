@@ -1,0 +1,67 @@
+body {
+    font-family: Arial;
+}
+
+form {
+    background-color: wheat;
+    padding: 8px;
+}
+
+h1 {
+    text-align: left;
+    background-color: #6ec4c4;
+    color: blue;
+}
+
+label {
+    margin: 0;
+    color: blue;
+}
+
+.input {
+    margin: 25px;
+}
+
+
+.hobby-btn {
+    margin: 8px 0 5px 100px;
+}
+
+.form-item {
+    margin: -20px 0px 0px 0px;
+}
+
+#name {
+    margin: 0 0 0 30px;
+}
+
+#birth {
+    margin: 10px 0 0 27px;
+}
+
+.gender-list {
+    color: blue;
+    margin: 10px 0 0 0;
+}
+
+.gender {
+    margin: 0 0 0 35px;
+}
+
+#address {
+    margin: 10px 0 0 49px;
+    height: 60px;
+}
+
+#state {
+    margin: 10px 0 0 66px;
+}
+
+#email {
+    margin: 10px 0 0 60px;
+}
+
+#phone {
+    margin: 10px 0 0 29px;
+}
+
