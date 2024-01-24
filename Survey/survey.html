@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+<div class="title">
+    <h2>Market Research Survey</h2>
+    <p>Please take a few moments to complete this satisfaction survey.</p>
+    <hr>
+</div>
+<ul>
+    <li>
+        <label>What is your age range?</label> <br>
+        <label>
+            <select id="age-range">
+                <option value="#">-------------------------------------------------</option>
+                <option value="#" selected>18-24</option>
+                <option value="#">25-34</option>
+                <option value="#">35-50</option>
+                <option value="#">50+</option>
+            </select>
+        </label>
+    </li>
+    <li>
+        <label>What is your yearly income range?</label> <br>
+        <label>
+            <select id="income-range">
+                <option value="#">-------------------------------------------------</option>
+                <option value="#" selected>$0 - $25,000</option>
+                <option value="#">$25,001 - $50,000</option>
+                <option value="#">$50,001 - $100,000</option>
+                <option value="#">$100,000+</option>
+            </select>
+        </label>
+    </li>
+    <li>
+        <label>Gender Identity</label> <br>
+        <label>
+            <input type="radio"> Male <br>
+            <input type="radio"> Female <br>
+            <input type="radio"> Nonbinary <br>
+            <input type="radio"> Other <br>
+            <input type="text">
+        </label>
+    </li>
+    <li>
+        <label>Which of the following products have your purchased in the last 2 months. Please check all that apply.</label> <br>
+        <lable>
+            <input type="checkbox"> Product 1 <br>
+            <input type="checkbox"> Product 2 <br>
+            <input type="checkbox"> Product 3
+        </lable>
+    </li>
+    <li>
+        <label>How often would you use our new product?</label> <br>
+        <lable>
+            <input type="radio"> Daily <br>
+            <input type="radio"> Weekly <br>
+            <input type="radio"> Monthly
+        </lable>
+    </li>
+    <li>
+        <label>What would you pay for the new product.</label> <br>
+        <lable>$</lable>
+        <lable><input type="text" size="8"></lable>
+        <lable> - </lable>
+        <lable><input type="text" size="1"></lable> <br>
+        <lable>Dollars</lable>
+        <lable>Cents</lable>
+    </li>
+    <li>
+        <lable>What features would you like to see in the new product.</lable> <br>
+        <input type="text">
+    </li>
+    <li>
+        <lable>Please rate your level of agreement with the following statements.</lable>
+    </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Title */
+.age:hover:active {
+    background-color: #d61b06;
+    transition-duration: 0.1s;
+}
+
+hr {
+    font-size: 5px;
+}
+
