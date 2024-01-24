@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+
+    <!-- Bài 1 -->
+    <script>
+        let input_scorePhysic = prompt("Enter the Physic score: ");
+        let input_ecoreChemistry = prompt("Enter the Chemistry score: ");
+        let input_scoreBiology = prompt("Enter the Biology score: ");
+        let scorePhysic = parseInt(input_scorePhysic);
+        let scoreChemistry = parseInt(input_ecoreChemistry);
+        let scoreBiology = parseInt(input_scoreBiology);
+        let total = scorePhysic + scoreChemistry + scoreBiology;
+        let average = total / 3;
+        document.write('Bài 1:');
+        document.write('<br/>');
+        document.write("Total: " + total);
+        document.write('<br/>');
+        document.write("Average: " + average);
+        document.write('<br/>');
+        document.write('<br/>');
+    </script>
+
+    <!-- Bài 2 -->
+    <script>
+      let inputC = prompt("Enter the Celsius: ");
+      let C = parseInt(inputC);
+      let F = (9 * C - 160) / 5
+      document.write('Bài 2:');
+      document.write('<br/>');
+      document.write("F: " + F);
+      document.write('<br/>');
+      document.write('<br/>');
+    </script>
+
+    <!-- Bài 3 -->
+    <script>
+      let inputR = prompt("Enter R: ");
+      let R = parseInt(inputR);
+      let S = 3.14 * Math.pow(R, 2);
+      document.write('Bài 3:');
+      document.write('<br/>');
+      document.write('S: ' + S);
+      document.write('<br/>');
+      document.write('<br/>');
+    </script>
+
+    <!-- Bài 4 -->
+    <script>
+      let input_r = prompt("Enter R: ");
+      let r = parseInt(input_r);
+      let ChuVi = 2 * 3.14 * r;
+      document.write('Bài 4:');
+      document.write('<br/>');
+      document.write("Chu vi: " + ChuVi);
+      document.write('<br/>');
+      document.write('<br/>');
+    </script>
+</body>
+</html>
