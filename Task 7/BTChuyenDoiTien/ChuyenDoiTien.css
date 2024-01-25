@@ -2,10 +2,12 @@ input {
     width: 120px;
     height: 24px;
 }
+
 select {
     width: 120px;
     height: 30px;
 }
+
 button {
     width: 100px;
     height: 30px;

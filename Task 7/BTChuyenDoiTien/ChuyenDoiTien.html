@@ -9,32 +9,37 @@
     <title>Chuyển đổi tiền</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th><lable for="Amount">Amount</lable></th>
-            <th>From Currency</th>
-            <th>To Currency</th>
-        </tr>
-        <tr>
-            <td><input type="text" id="Amount"></td>
-            <td>
-                <select id="From" >
-                    <option value="VND">VND</option>
-                    <option value="USD">USD</option>
-                </select>
-            </td>
-            <td>
-                <select id="To">
-                    <option value="VND">VND</option>
-                    <option value="USD">USD</option>
-                </select>
-            </td>
-            <td><button onclick="Change()">Convert</button></td>
-        </tr>
-    </table>
 
-    <br>
-    <p id="Result"></p>
+<table>
+    <tr>
+        <th>
+            <lable for="Amount">Amount</lable>
+        </th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="Amount"></td>
+        <td>
+            <select id="From">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="Change()">Convert</button>
+        </td>
+    </tr>
+</table>
+
+<br>
+<p id="Result"></p>
 </body>
 </html>
 
