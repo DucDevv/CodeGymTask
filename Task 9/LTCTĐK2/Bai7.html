@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+    <script>
+        // Giải phương trình bậc 2.
+        // a * x^2 + b * x + c = 0
+        // d = =b^2-4ac
+        // d < 0 => phương trình vô nghiệm
+        // d = 0 => phương trình có nghiệm kép
+        // d > 0 => phương trình có 2 nghiệm phân biệt
+        let a = parseInt(prompt('Nhap a'));
+        let b = parseInt(prompt('Nhap b'));
+        let c = parseInt(prompt('Nhap c'));
+        let d = b * b - 4 * a * c;
+        let x;
+        if (a === 0) {
+            if (b === 0){
+                if (c === 0){
+                    alert('Phuong trinh co vo so nghiem')
+                } else {
+                    alert('Phuong trinh vo nghiem')
+                }
+            } else {
+                x = (-c) / b;
+                alert('Nghiem cua phuong trinh la ' + x);
+            }
+        } else {
+            if (d < 0) {
+                alert('Phuong trinh vo nghiem')
+            } else if (d === 0) {
+                x = - (b / (2 * a));
+                alert('Phuong trinh co nghiem kep x1 = x2 =  ' + x);
+            } else {
+                let x1 = ((-b + Math.sqrt(d)) / 2 * a);
+                let x2 = ((-b - Math.sqrt(d)) / 2 * a);
+                alert(`Phuong trinh co 2 nghiem phan biet x1 = ${x1}, x2 = ${x2}`);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+    <script>
+        // Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+        // doanh thu dưới 50 triệu đồng thì sẽ hưởng 5% hoa hồng -> lowest
+        // doanh thu từ 50-100 triệu đồng thì sẽ nhận được 7% hoa hồng -> middle
+        // trên 100 triệu doanh thu thì sẽ nhận 10% hoa hồng -> highest
+        let revenue = parseInt(prompt('Enter the revenue'));
+        let lowest = (revenue / 100) *5;
+        let middle = (revenue / 100) *7;
+        let highest = (revenue / 100) *10;
+        if (revenue > 50000000) {
+            if (revenue > 100000000) {
+
+                alert('highest' + highest);
+            } else {
+                alert('middle' + middle);
+            }
+        } else {
+            alert('lowest' + lowest);
+        }
+    </script>
+</body>
+</html>

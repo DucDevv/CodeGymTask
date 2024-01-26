@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 11</title>
+</head>
+<body>
+    <script>
+        // Viết chương trình tính thuế thu nhập cá nhân.
+        // 30% thuế thu nhập nếu lương là 15 triệu
+        // 20% thuế thu nhập nếu lương từ 7 đến 15 triệu
+        // 10% thuế thu nhập nếu lương dưới 7 triệu
+        let l = parseInt(prompt('Nhap luong'));
+        let tn;
+        if (l >= 15000000) {
+            tn = l * 30 / 100;
+        } else if (l >= 7000000) {
+            tn = l * 20 / 100;
+        } else {
+            tn = l * 10 / 100;
+        }
+    </script>
+</body>
+</html>

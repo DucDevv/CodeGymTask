@@ -47,7 +47,8 @@
         </label>
     </li>
     <li>
-        <label>Which of the following products have your purchased in the last 2 months. Please check all that apply.</label> <br>
+        <label>Which of the following products have your purchased in the last 2 months. Please check all that
+            apply.</label> <br>
         <lable>
             <input type="checkbox"> Product 1 <br>
             <input type="checkbox"> Product 2 <br>
@@ -66,17 +67,109 @@
         <label>What would you pay for the new product.</label> <br>
         <lable>$</lable>
         <lable><input type="text" size="8"></lable>
-        <lable> - </lable>
-        <lable><input type="text" size="1"></lable> <br>
+        <lable> -</lable>
+        <lable><input type="text" size="1"></lable>
+        <br>
         <lable>Dollars</lable>
         <lable>Cents</lable>
     </li>
     <li>
-        <lable>What features would you like to see in the new product.</lable> <br>
+        <lable>What features would you like to see in the new product.</lable>
+        <br>
         <input type="text">
     </li>
     <li>
-        <lable>Please rate your level of agreement with the following statements.</lable>
+        <table>
+            <lable>Please rate your level of agreement with the following statements.</lable>
+            <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <td>Strongly Disagree</td>
+                <td>Disagree</td>
+                <td>Agree</td>
+                <td>Strongly Agree</td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <th>
+                    <label>Our products are priced fairly.</label>
+                </th>
+                <td>
+                    <input id="Field403_1" name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Strongly Disagree" onchange="handleInput(this);"/>
+                    <label>1</label>
+                </td>
+                <td>
+                    <input id="Field403_2" name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Disagree" onchange="handleInput(this);"/>
+                    <label>2</label>
+                </td>
+                <td>
+                    <input id="Field403_3" name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Agree" onchange="handleInput(this);"/>
+                    <label>3</label>
+                </td>
+                <td>
+                    <input id="Field403_4" name="Field403" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Strongly Agree" onchange="handleInput(this);"/>
+                    <label>4</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label>Our products are high quality.</label>
+                </th>
+                <td>
+                    <input id="Field404_1" name="Field404" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Strongly Disagree" onchange="handleInput(this);"/>
+                    <label>1</label>
+                </td>
+                <td>
+                    <input id="Field404_2" name="Field404" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Disagree" onchange="handleInput(this);"/>
+                    <label>2</label>
+                </td>
+                <td>
+                    <input id="Field404_3" name="Field404" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Agree" onchange="handleInput(this);"/>
+                    <label>3</label>
+                </td>
+                <td>
+                    <input id="Field404_4" name="Field404" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Strongly Agree" onchange="handleInput(this);"/>
+                    <label>4</label>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label>You would recommend our product to a friend or coworker.</label>
+                </th>
+                <td>
+                    <input id="Field405_1" name="Field405" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Strongly Disagree" onchange="handleInput(this);"/>
+                    <label for="Field405_1">1</label>
+                </td>
+                <td>
+                    <input id="Field405_2" name="Field405" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Disagree" onchange="handleInput(this);"/>
+                    <label>2</label>
+                </td>
+                <td>
+                    <input id="Field405_3" name="Field405" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Agree" onchange="handleInput(this);"/>
+                    <label>3</label>
+                </td>
+                <td
+                        title="Strongly Agree">
+                    <input id="Field405_4" name="Field405" type="radio" role="radio" tabindex="0" aria-checked="false"
+                           value="Strongly Agree" onchange="handleInput(this);"/>
+                    <label>4</label>
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </li>
 </ul>
 </body>
