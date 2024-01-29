@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Bài 1: Viết chương trình nhận vào một số từ hộp thoại,
+        // việc nhập kết thúc khi người dùng nhập vào giá trị -1.
+        // Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện
+        // tính tổng các giá trị đó.
+        let input = 0;
+        let total = 0;
+
+        while (input !== -1) {
+            input = +prompt('Enter a number (-1 to exit)');
+
+            if (isNaN(input)) {
+                alert('Invalid input. Please enter a valid number. ')
+            } else {
+                total += input;
+                alert('Current total: ' + total);
+            }
+        }
+    </script>
+</body>
+</html>
