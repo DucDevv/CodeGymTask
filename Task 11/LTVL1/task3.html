@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+    // Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+    // Dãy Finonacci là một chuỗi số trong đó một số là tổng
+    // của hai s trước đó
+    // Dãy Fibonacci bắt đầu với 2 số 0 và 1
+
+    // Cách 1: thủ công
+    let a = 0;
+    let b = 1;
+    console.log(a);
+    console.log(b);
+    for (let i = 2; i < 20; i++) {
+        let c = a + b; // Số Fibonacci tiếp theo
+        console.log(c);
+        a = b;
+        b = c;
+    }
+
+    // // Cách 2: Dùng mảng
+    //     let fib = [0, 1];
+    //     // i = 2 v đã có sẵn 2 phần tử trong mảng
+    //     for (let i = 2; i < 20; i++) {
+    //         fib[i] = fib[i - 1] + fib[i - 2];
+    //     }
+    //
+    // console.log(fib);
+</script>
+</body>
+</html>

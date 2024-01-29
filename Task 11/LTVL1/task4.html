@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+<script>
+    // Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+
+    // Cách 1: Thủ công -> đáp án bằng 3
+    let a = 0;
+    let b = 1;
+    let i = 2
+
+    while (true) {
+        let c = a + b;
+        if (c % 5 === 0) {
+            break;
+        }
+        a = b;
+        b = c;
+        i++;
+    }
+
+    console.log(`The first Fibonacci number divisible by 5 is ${b}`);
+
+    // Cách 2: Dùng mảng -> đáp án bằng 5
+    // let fib = [0, 1];
+    // let i = 2;
+    //
+    // while (true) {
+    //     fib[i] = fib[i - 1] + fib[i - 2];
+    //
+    //     if (fib[i] % 5 === 0) {
+    //         break;
+    //     }
+    //
+    //     i++;
+    // }
+    //
+    // let result = fib[i];
+    // console.log(result);
+</script>
+</body>
+</html>

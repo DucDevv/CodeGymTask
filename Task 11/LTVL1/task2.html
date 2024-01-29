@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<body>
+<script>
+    // Lấy thông tin nhiệt độ
+    let inputTemperature = +prompt('Enter a temperature');
+    if (isNaN(inputTemperature)) {
+        alert('Invalid input. Please enter a valid number.');
+    } else {
+        while (inputTemperature) {
+            if (inputTemperature > 100) {
+                alert('Decrease the temperature')
+            } else if (inputTemperature < 20) {
+                alert('Increase the temperature')
+            }
+        }
+    }
+</script>
+</body>
+</html>

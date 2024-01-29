@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+<script>
+    // Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+
+    // Cách 1: thủ công
+    let a = 0;
+    let b = 1;
+    let total = 1;
+
+    for (let i = 2; i < 20; i++) {
+        let c = a + b;
+        total += c;
+        a = b;
+        b = c;
+    }
+    console.log(total);
+
+
+    // Cách 2: dùng mảng
+    // let fib = [0, 1];
+    // let total = 1;
+    // // i = 2 v đã có sẵn 2 phần tử trong mảng
+    // for (let i = 2; i < 20; i++) {
+    //     fib[i] = fib[i - 1] + fib[i - 2];
+    //     total += fib[i];
+    // }
+    // console.log(fib);
+    // console.log(total);
+</script>
+</body>
+</html>
