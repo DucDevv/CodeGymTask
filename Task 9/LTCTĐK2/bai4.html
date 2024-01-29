@@ -10,7 +10,11 @@
         let a = parseInt(prompt('Nhập chiều dài'));
         let b = parseInt(prompt('Nhập chiều rộng'));
         let s = a * b;
-        alert('Diện tích hình chữ nhật là: ' + s);
+        if (a <= 0 || b <= 0){
+            alert('Giá trị cuả cạnh phải là số dương');
+        } else {
+            alert('Diện tích hình chữ nhật là: ' + s);
+        }
     </script>
 </body>
 </html>

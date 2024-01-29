@@ -9,7 +9,11 @@
         // Tính diện tích hình vuông khi biết cạnh a.
         let a = parseInt(prompt('Nhập độ dài cạnh hinnh vuông'))
         let s = a * a;
-        alert('Diện tích hình vuông: ' + s)
+        if (a <= 0){
+            alert('Giá trị cuả cạnh phải là số dương');
+        } else {
+            alert('Diện tích hình vuông: ' + s)
+        }
     </script>
 </body>
 </html>

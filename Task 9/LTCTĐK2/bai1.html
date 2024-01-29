@@ -6,10 +6,21 @@
 </head>
 <body>
     <script>
-        // Chuyển từ độ C sang độ F.
-        let c = parseInt(prompt('Nhập độ C'));
-        let f = c * (9 / 5) +32;
-        alert('Độ F: ' + f);
+        // Nhập 1 để chuyển độ C sang độ F
+        // Nhập 2 để chuyển độ F sang dộ C
+        // Những trường hợp còn lại hiển thị "Lỗi!"
+        let chose = parseInt(prompt('Nhập 1 để chuyển đổi C -> F, 2 để Chuyển đổi F -> C'));
+        if (chose === 1) {
+            let c = parseInt(prompt('Nhập độ C'));
+            f = c * 1.8 + 32;
+            alert('Độ F: ' + f);
+        } else if (chose === 2) {
+            let f = parseInt(prompt('Nhập độ F'));
+            c = (f - 32) / 1.8;
+            alert('Độ C: ' + c);
+        } else {
+            alert('Lỗi! Vui lòng nhập lại');
+        }
     </script>
 </body>
 </html>

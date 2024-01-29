@@ -10,7 +10,11 @@
         let a = parseInt(prompt('Nhập chiều cao'));
         let b = parseInt(prompt('Nhập cạnh đáy'));
         let s = (a * b)/2;
-        alert('Diện tích tam giác vuông: ' + s);
+        if (a <= 0 || b <= 0){
+            alert('Giá trị cuả cạnh phải là số dương');
+        } else {
+            alert('Diện tích tam giác vuông: ' + s);
+        }
     </script>
 </body>
 </html>

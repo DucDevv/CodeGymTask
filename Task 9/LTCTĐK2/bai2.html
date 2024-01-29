@@ -9,7 +9,11 @@
         // Chuyển từ mét sang feet
         let m = parseInt(prompt('Nhập mét'));
         let f = m * 3.2808;
-        alert(f + ' feet')
+        if (m < 0) {
+            alert('Không tồn tại số mét âm')
+        } else {
+            alert(f + ' feet')
+        }
     </script>
 </body>
 </html>
