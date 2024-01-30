@@ -5,6 +5,29 @@
     <title>Task 7</title>
 </head>
 <body>
-
+<script>
+    let countDivisibleBy3 = 0;
+    let countDivisibleBy5 = 0;
+    let countDivisibleBy3And5 = 0;
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            document.write('FizzBuzz' + '<br>');
+            countDivisibleBy3And5 += 1;
+            continue;
+        } else if (i % 3 === 0 && i % 5 !== 0) {
+            document.write('Fizz' + '<br>');
+            countDivisibleBy3 += 1
+            continue;
+        } else if (i % 3 !== 0 && i % 5 === 0) {
+            document.write('Buzz' + '<br>');
+            countDivisibleBy5 += 1;
+            continue;
+        }
+        document.write(i + '<br>');
+    }
+    document.write('Number of numbers divisible by 3: ' + countDivisibleBy3 + '<br>');
+    document.write('Number of numbers divisible by 5: ' + countDivisibleBy5 + '<br>');
+    document.write('Number of numbers divisible by 3 and 5: ' + countDivisibleBy3And5 + '<br>');
+</script>
 </body>
 </html>

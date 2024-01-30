@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+    // Vẽ tam giác
+    for (let i = 1; i <= 5; i++) {
+        let row = '';
+        for (let j = 1; j <= i; j++) {
+            row += '*';
+        }
+        console.log(row);
+    }
+    console.log('----------------------------------')
+    for (let i = 1; i <= 5; i++) {
+        let row = '';
+        for (let j = 1; j <= 5 - i + 1; j++) {
+            row += '*';
+        }
+        console.log(row);
+    }
+    console.log('----------------------------------')
+    for (let i = 1; i <= 5; i++) {
+        let row = '';
+        for (let j = 1; j <= 5 - i; j++) {
+            row += ' ';
+        }
+        for (let k = 1; k <= i; k++) {
+            row += '*';
+        }
+        console.log(row);
+    }
+    console.log('----------------------------------')
+    for (let i = 1; i <= 5; i++) {
+        let row = '';
+        for (let j = 1; j <= i - 1; j++) {
+            row += ' ';
+        }
+        for (let k = 1; k <= 6 - i; k++) {
+            row += '*';
+        }
+        console.log(row);
+    }
+</script>
+</body>
+</html>
