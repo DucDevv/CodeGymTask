@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Use for
+    let inputNumber = prompt("nhập vào")
+    let isPrime = true;
+    for (let i = 2; i < inputNumber; i++) {
+        if (inputNumber % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime) {
+        console.log(inputNumber + " là số nguyên tố")
+    } else {
+        console.log(inputNumber + " không là số nguyên tố")
+    }
+
+    // Use while
+    // let inputNumber = +prompt("nhập vào")
+    // let isPrime = true;
+    // let i = 2;
+    // while (i < inputNumber) {
+    //     if (inputNumber % i === 0) {
+    //         isPrime = false;
+    //         break;
+    //     }
+    //     i++;
+    // }
+    // if (isPrime) {
+    //     console.log(inputNumber + " là số nguyên tố");
+    // } else {
+    //     console.log(inputNumber + " không là số nguyên tố");
+    // }
+</script>
+</body>
+</html>

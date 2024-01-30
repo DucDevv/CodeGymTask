@@ -9,32 +9,22 @@
     // Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số
     // tự nhiên.
 
-    let count = 3; // Số lượng số chia hết cho 7 đã tìm thấy
+    let count = 0; // Số lượng số chia hết cho 7 đã tìm thấy
     let total = 0; // Tổng các số chia hết cho 7
-    let num = 1; // Số hiện tại đang xem xét
+    let num = 0; // Số hiện tại đang xem xét
 
     while (true) {
         if (num % 7 === 0) {
             total += num;
-            count--;
+            count++;
         }
-        if (count === 0) {
+        if (count === 30) {
             break;
         }
         num++;
     }
 
     console.log(`Total: ${total}`);
-
-    // Hỏi a Quân
-    // let total = 0;
-    //
-    // for (let i =0; i < 30; i++) {
-    //     if (i % 7 === 0) {
-    //         total += i;
-    //     }
-    // }
-    // console.log(total);
 
 </script>
 </body>
