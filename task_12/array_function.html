@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array function</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    console.log(arr);
+    console.log('--- Thêm phần tử cuối cùng của mảng ---');
+    arr.push(11);
+    console.log(arr);
+
+    console.log('--- Xóa phần tử cuối cùng của mảng ---');
+    arr.pop();
+    console.log(arr);
+
+    console.log('--- Xóa phần tử đầu tiên của mảng ---')
+    arr.shift();
+    console.log(arr);
+
+    console.log('--- Thêm phần tử đầu tiên của mảng ---')
+    arr.unshift(12);
+    console.log(arr);
+
+    console.log('--- Sắp xếp phần tử của mảng ---')
+    arr.sort();
+    console.log(arr);
+
+    console.log('--- Đảo ngược phần tử của mảng ---')
+    arr.reverse();
+    console.log(arr);
+
+    console.log('--- Sắp xếp tăng dần mảng chứa số ---')
+    arr.sort(function (a,b) {
+        return a - b
+    });
+    console.log(arr);
+
+    console.log('--- Sắp xếp giảm dần mảng chứa số ---')
+    arr.sort(function (a,b) {
+        return b - a
+    });
+    console.log(arr);
+</script>
+</body>
+</html>
