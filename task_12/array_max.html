@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array max</title>
+</head>
+<body>
+<script>
+    let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let max = number[0];
+    let index = 0;
+    for (let i = 0; i < number.length; i++) {
+        if (number[i] > max) {
+            max = number[i];
+            index = i;
+        }
+    }
+    alert('Max number: ' + max + ' at position ' + index);
+</script>
+</body>
+</html>
