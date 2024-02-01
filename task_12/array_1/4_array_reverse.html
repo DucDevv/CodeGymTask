@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [5, 20, 13, 48, 1];
+    let firstNumber = 0;
+    let lastNumber = array.length - 1;
+    while (firstNumber < lastNumber) {
+        let temp = array[firstNumber];
+        array[firstNumber] = array[lastNumber];
+        array[lastNumber] = temp;
+        firstNumber++;
+        lastNumber--;
+    }
+    document.write(array);
+</script>
+</body>
+</html>

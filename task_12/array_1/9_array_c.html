@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array c</title>
+</head>
+<body>
+<script>
+    let arrayA = [];
+    let arrayB = [];
+    console.log('Nhập voà mảng A: ');
+    for (let i = 0; i < 10; i++) {
+        let numberA = +prompt('Nhập phần tử thứ ' + (i + 1) + ' của mảng A: ');
+        arrayA.push(numberA);
+    }console.log('Nhập voà mảng B: ');
+    for (let i = 0; i < 10; i++) {
+        let numberB = +prompt('Nhập phần tử thứ ' + (i + 1) + ' của mảng B: ');
+        arrayB.push(numberB);
+    }
+    console.log('Mảng A: ', arrayA);
+    console.log('Mảng B: ', arrayB);
+
+    let arrayC = new Array(20);
+    arrayC = arrayA.concat(arrayB);
+    console.log('Mảng C:', arrayC);
+</script>
+</body>
+</html>

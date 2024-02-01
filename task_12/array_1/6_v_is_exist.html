@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>V is exist</title>
+</head>
+<body>
+<script>
+    let numbers = [];
+    console.log("Nhập vào mảng A:");
+    for (let i = 0; i < 10; i++) {
+        let numberA = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + " của mảng A:"));
+        numbers.push(numberA);
+    }
+    console.log("Mảng A:", numbers);
+    let inputV = +prompt('Enter V value: ');
+    let result;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === inputV) {
+            result = true;
+        }
+    }
+    if (result) {
+        alert('V is in the array!')
+    } else{
+        alert('V is not in the array!')
+    }
+</script>
+</body>
+</html>

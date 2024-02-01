@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max and average</title>
+</head>
+<body>
+<script>
+    let numbers = [1, 4, 5, 99, 54, 3, 12, 44, 10, 2];
+    let max = numbers[0];
+    let maxIndex = 0;
+    let total = 0;
+    let average;
+
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+        average = total / numbers.length;
+        if (numbers[i] > max) {
+            max = numbers[i];
+            maxIndex = i;
+        }
+    }
+    console.log('Max: '+ max +' is at index '+ maxIndex);
+    console.log('Average: ' + average);
+</script>
+</body>
+</html>
