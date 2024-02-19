@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+    <!--
+    Tạo hàm nhận vào hai tham số. Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ
+    hai, hiển thị hộp thoại thông báo cho người dùng. Nếu giá trị của tham số thứ nhất
+    nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    -->
+
+    <button onclick="compare2Number()">Click here to start</button>
+    <p id="result"></p>
+    <script>
+        function compare2Number(){
+            let number1 = +prompt("Enter the first number: ");
+            let number2 = +prompt("Enter the second number: ");
+            let sumOf2Numbers = number1 + number2;
+            if (number1 > number2){
+                alert("Number 1 is greater than number 2");
+            }
+            else {
+                document.getElementById("result").innerHTML = sumOf2Numbers;
+            }
+        }
+
+    </script>
+</body>
+</html>

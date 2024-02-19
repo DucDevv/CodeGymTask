@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+</head>
+<body>
+    <!--
+    Tạo hàm nhận vào một đối số dạng số, tăng giá trị đối số đó lên 1 và trả lại giá trị
+    cho lời gọi hàm. Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên
+    màn hình.
+    -->
+
+    <button onclick="displayResult()">Click here to start</button>
+    <p id="result"></p>
+    <script>
+        function increaseNum(number){
+            number+=1;
+            return number;
+        }
+        function displayResult(){
+            let number = +prompt("Enter the number: ");
+            let result = increaseNum(number);
+            document.getElementById("result").innerHTML = result;
+        }
+
+    </script>
+</body>
+</html>

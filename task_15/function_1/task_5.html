@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task_5</title>
+</head>
+<body>
+
+    <label for="starName">Enter the star: </label>
+    <input type="text" name="" id="starName">
+    <button onclick="checkStar()">Search</button>
+    <p id="result"></p>
+    <script>
+        function checkStar(){
+            let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe",
+                        "Regulus"];
+            let constellation = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila",
+                "Ursa Major", "Leo"]
+            let starName = document.getElementById("starName").value;
+            let index_star = 0;
+            let result;
+            for(let i = 0; i < star.length; i++){
+                if(starName === star[i]){
+                    index_star = i;
+                    for(let j = 0; j < constellation.length; j++){
+                        if(index_star === j){
+                            result = constellation[j];
+                        }
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
