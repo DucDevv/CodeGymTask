@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search and update</title>
+</head>
+<body>
+<script>
+    let str = prompt("Enter the string: ");
+    let strArray = str.split(" ", str.length);
+    for (let i = 0; i < strArray.length; i++){
+        if (strArray[i] === "-") {
+            // let temp = "";
+            // temp = "-";
+            strArray[i] = "_";
+        }
+    }
+    console.log(strArray);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2 dimensional arrays</title>
+</head>
+<body>
+<script>
+    let a = [
+        [1, 2, 1, 24],
+        [8, 11, 9, 4],
+        [7, 0, 7, 27],
+        [3, 10, 26, 7]
+    ];
+    // Lặp qua từng hàng trong mảng 2-D
+    for (let i in a) {
+        // Output hàng hiện tại
+        console.log('row ' + i)
+        // Lặp qua từng phần tử trong hàng hiện tại
+        for (let j in a[i]) {
+            // Output giá trị phần tử hiện tại
+            console.log(' ' + a[i][j]);
+        }
+    }
+</script>
+</body>
+</html>

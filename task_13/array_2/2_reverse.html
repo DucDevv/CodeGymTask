@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reverse</title>
+</head>
+<body>
+<script>
+    let array = ['c', 's', 'c', '2', '6', '1'];
+    let firstLetter = 0;
+    let lastLetter = array.length - 1;
+    while (firstLetter < lastLetter) {
+        let temp = array[firstLetter];
+        array[firstLetter] = array[lastLetter];
+        array[lastLetter] = temp;
+        firstLetter++;
+        lastLetter--;
+    }
+    let arrayString = array.join('')
+    document.write(arrayString);
+</script>
+</body>
+</html>

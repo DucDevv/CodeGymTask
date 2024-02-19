@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array count number</title>
+</head>
+<body>
+<script>
+    let charArray = ['1', 'f', '45', 'hihi', '34'];
+    let count = 0;
+    function countNumericCharacter(arr){
+        for (let i = 0; i < arr.length; i++) {
+            if (!isNaN(arr[i])) { // isNaN() kiểm tra điều kiện giá trị truyền vào có phải là một số không hợp lệ hay không
+                count++;
+            }
+        }
+        return count; // Cho phép giá trị count dc truyền lại cho phần gọi hàm để có thể tiếp tục xử lý nếu cần thiết
+    }
+    let numericCount = countNumericCharacter(charArray);
+    console.log('The number of numeric characters in array: ' + numericCount);
+</script>
+</body>
+</html>
