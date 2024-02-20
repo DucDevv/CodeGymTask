@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+</head>
+<body>
+    <!--
+    Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số
+    hàm trả về true, ngược lại trả về false.
+    -->
+
+    <label for="character">Enter the character: </label>
+    <input type="text" id="character">
+    <button onclick="checkCharacter()">Check</button>
+    <p id="result"></p>
+    <script>
+        function isNumeric(character){
+            return !isNaN(parseFloat(character));
+        }
+        function checkCharacter(){
+            let character = parseFloat(document.getElementById("character").value)
+            let result = isNumeric(character);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

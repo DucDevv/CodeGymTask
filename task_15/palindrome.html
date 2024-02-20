@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palindrome</title>
+</head>
+<body>
+
+    <label for="word">Enter a word</label>
+    <input type="text" id="word">
+    <button onclick="checkPalindrome()">Check</button>
+    <p id="result"></p>
+    <script>
+        function isPalindrome(word) {
+            word = word.toLowerCase().replace(/[^a-z]/g, '');
+
+            for (let i = 0; i < Math.floor(word.length / 2); i++) {
+                if (word[i] !== word[word.length - 1 - i]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+        function checkPalindrome(){
+            let inputWord = document.getElementById("word").value;
+            let result = isPalindrome(inputWord);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 8</title>
+</head>
+<body>
+
+    <!--
+    Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+    -->
+
+    <button onclick="reverse()">Click here to start</button>
+    <p id="result"></p>
+    <script>
+        function reverseArr(arr){
+            return arr.reverse();
+        }
+        function reverse(){
+            let arr = [];
+            console.log("Enter the array:");
+            let n = parseInt(prompt("Enter the number of elements: "));
+            for (let i = 0; i < n; i++) {
+                let number = parseInt(prompt("The element number " + (i + 1) + " of the array is:"));
+                arr.push(number);
+            }
+            console.log("The array:", arr);
+            let result = "After reverse: arr = " + "[" + reverseArr(arr) +"]";
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

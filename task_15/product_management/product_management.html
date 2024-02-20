@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+</head>
+<body>
+
+    <h2>Add New Product</h2>
+    <label for="product"></label>
+    <input type="text" id="product" value="">
+    <button onclick="addProduct()">Add</button>
+    <h2>Display All Product</h2>
+    <h3>Product Name</h3>
+    <p id="listOfProduct"></p>
+
+    <script>
+        let productList = ["Sony Xperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note 4",
+            "Apple iPhone 6S", "Xiaomi Mi 5s Plus", "Apple iPhone 8 Plus",
+            "Fujitsu F-04E", "Oppo A71"];
+        function displayListOfProduct(){
+            let productListHTML = "";
+            for (let i = 0; i < productList.length; i++){
+                productListHTML += "<li><input type=\"hidden\" id=\"productIndex\" value=\"' + i + '\">" + productList[i] + "<button onclick='updateProduct(" + i + ")'>Edit</button>" + "<button onclick='deleteProduct()' index='"+ i +"'>Delete</button>" + "</li>";
+            }
+            document.getElementById("listOfProduct").innerHTML = productListHTML;
+        }
+        function addProduct(){
+            let newProduct = document.getElementById("product").value;
+            productList.unshift(newProduct);
+            displayListOfProduct(newProduct)
+        }
+        function updateProduct(index){
+            let productToUpdateIndex = index;
+            // let newProductName = prompt("Enter the new name: ");
+            let newProductName = prompt("Enter the new name:", document.getElementById("product").value);
+            if(productToUpdateIndex !== null && productToUpdateIndex >= 0 && productToUpdateIndex < productList.length){
+                productList[productToUpdateIndex] = newProductName;
+                displayListOfProduct();
+            }
+        }
+        function deleteProduct(){
+            let productToDeleteIndex = event.target.getAttribute("index");
+            if (productToDeleteIndex >= 0 && productToDeleteIndex < productList.length){
+                productList.splice(productToDeleteIndex, 1);
+            }
+            displayListOfProduct();
+        }
+        displayListOfProduct();
+    </script>
+</body>
+</html>

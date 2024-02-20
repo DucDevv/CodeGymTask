@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+
+    <!--
+    Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây
+    dựng được.
+    -->
+
+    <label for="inputNumber">Enter the number: </label>
+    <input type="number" id="inputNumber">
+    <button onclick="calculateFactorial()">Count</button>
+    <p id="result"></p>
+    <script>
+        function factorial(inputNumber){
+            let temp = 1;
+            for(let i = 1; i <= inputNumber; i++){
+                temp = temp * i;
+            }
+            return temp;
+        }
+        function calculateFactorial(){
+            let inputNumber = parseFloat(document.getElementById("inputNumber").value);
+            let result = factorial(inputNumber);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

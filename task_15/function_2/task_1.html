@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+</head>
+<body>
+    <!--
+     Viết hàm tính bình phương của một số bất kỳ được đưa vào. Gọi hàm vừa xây dựng
+     được.
+    -->
+
+    <label for="inputNumber">Enter the number: </label>
+    <input type="number" id="inputNumber">
+    <button onclick="calculateSquare()">Count</button>
+    <p id="result"></p>
+    <script>
+        function squareOfNum(number) {
+            return number * number;
+        }
+        function calculateSquare(){
+            let inputNumber = parseFloat(document.getElementById("inputNumber").value);
+            let result = squareOfNum(inputNumber);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>

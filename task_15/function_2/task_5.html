@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 5</title>
+</head>
+<body>
+
+    <!--
+    Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    -->
+
+    <label for="number1">Enter the first number: </label>
+    <input type="number" id="number1">
+    <br>
+    <label for="number2">Enter the second number: </label>
+    <input type="number" id="number2">
+    <br>
+    <label for="number3">Enter the third number: </label>
+    <input type="number" id="number3">
+    <br>
+    <button onclick="minNumber()">Check</button>
+    <p id="result"></p>
+    <script>
+        function findMinNumber(number1, number2, number3){
+            let min = number1;
+            if(number2 < min){
+                min = number2;
+            }
+            if(number3 < min){
+                min = number3;
+            }
+            return min;
+        }
+        function minNumber(){
+            let number1 = parseFloat(document.getElementById("number1").value);
+            let number2 = parseFloat(document.getElementById("number2").value);
+            let number3 = parseFloat(document.getElementById("number3").value);
+            let result = findMinNumber(number1, number2, number3);
+            document.getElementById("result").innerHTML = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
