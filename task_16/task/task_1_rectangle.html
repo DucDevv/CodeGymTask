@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="1368px" height="768px"
+            style="border:1px solid #d3d3d3;"></canvas>
+    <script>
+      class Rectangle {
+        x
+        y
+        lengthSide
+        widthSide
+
+
+        constructor(lengthSide, widthSide) {
+          this.lengthSide = lengthSide;
+          this.widthSide = widthSide;
+        }
+        setLengthSide(lengthSide) {
+          this.lengthSide = lengthSide;
+        }
+        setWidthSide(widthSide) {
+          this.widthSide = widthSide;
+        }
+        getArea() {
+          console.log(this.lengthSide * this.widthSide);
+        }
+
+        getPerimeter() {
+          console.log((this.lengthSide + this.widthSide) * 2);
+        }
+      }
+      function creatRectangle(){
+        let canvas = document.getElementById("myCanvas");
+        let context = canvas.getContext("2d");
+        let lengthSide = 200;
+        let widthSide = 100;
+        let x = 50;
+        let y = 50;
+        context.fillStyle = 'red'; // Màu sắc của hình chữ nhật
+        context.fillRect(x, y, lengthSide, widthSide); // Vẽ hình chữ nhật
+        context.strokeStyle = 'blue'; // Màu sắc đường viền hình chữ nhật
+        context.lineWidth = 2; // Độ da đươn viền
+        context.strokeRect(x, y, lengthSide, widthSide); // Vẽ đường viền hình chữ nhật
+      }
+
+      let rectangle = new Rectangle(4, 3);
+      rectangle.setLengthSide(12);
+      rectangle.setWidthSide(6);
+      rectangle.getArea();
+      rectangle.getPerimeter();
+      creatRectangle();
+    </script>
+</body>
+</html>

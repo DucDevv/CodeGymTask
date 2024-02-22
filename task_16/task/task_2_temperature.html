@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+
+    <script>
+        class Temperature {
+            celsius
+
+            constructor(celsius) {
+                this.celsius = celsius;
+            }
+
+            getCelsiusToFahrenheit() {
+                console.log((this.celsius * 9/5) + 32);
+            }
+            getCelsiusToKevin() {
+                console.log(this.celsius + 273.15);
+            }
+        }
+
+        let inputCelsius = new Temperature(25);
+        inputCelsius.getCelsiusToFahrenheit();
+        inputCelsius.getCelsiusToKevin();
+    </script>
+</body>
+</html>

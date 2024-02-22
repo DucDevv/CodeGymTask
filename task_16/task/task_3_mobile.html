@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mobile</title>
+</head>
+<body>
+
+    <script>
+        class Mobile {
+            batteryStatus
+            sendMessages
+            inboxMessages
+            sentMessages
+
+            constructor(batteryStatus, sendMessages, inboxMessages, sentMessages) {
+                this.batteryStatus = batteryStatus;
+                this.sendMessages = sendMessages;
+                this.inboxMessages = inboxMessages;
+                this.sentMessages = sentMessages;
+            }
+            getDecreaseBatteryStatus() {
+                if (this.batteryStatus > 0) {
+                    this.batteryStatus -= 1;
+                }
+            }
+            getStatus(phoneName) {
+                if(this.batteryStatus > 0 && this.batteryStatus <= 100){
+                    console.log("The " + phoneName + " has " + this.batteryStatus + "% battery remaining");
+                }
+                else if(this.batteryStatus === 0){
+                    console.log("The phone is out of battery")
+                }
+            }
+            getSendMessages(message, receiver) {
+                receiver.getReceiveMessages(message);
+                console.log(this.sendMessages);
+                this.sendMessages.push(message);
+                this.getDecreaseBatteryStatus();
+            }
+            getReceiveMessages(message){
+                console.log(this.inboxMessages);
+                this.inboxMessages.push(message);
+                this.getDecreaseBatteryStatus();
+            }
+            getCheckInboxMessages(phoneName){
+                document.write("Inbox Messages of " + phoneName + "<br>");
+                for(let i = 0; i < this.inboxMessages.length; i++){
+                    document.write(this.inboxMessages[i] + "<br>");
+                }
+            }
+        }
+        let sendMessagesFromNokia = prompt("Enter the messages from Nokia: ");
+        let sendMessagesFromIphone = prompt("Enter the messages from iPhone: ");
+        let nokia = new Mobile(67, sendMessagesFromNokia, [], []);
+        let iPhone = new Mobile(89, sendMessagesFromIphone, [], []);
+
+        nokia.getStatus("Nokia");
+        nokia.sendMessages = [];
+        nokia.getSendMessages(sendMessagesFromNokia, iPhone);
+        iPhone.getCheckInboxMessages("iPhone");
+
+        iPhone.getStatus("iPhone");
+        iPhone.sendMessages = [];
+        iPhone.getSendMessages(sendMessagesFromIphone, nokia);
+        nokia.getCheckInboxMessages("Nokia");
+    </script>
+</body>
+</html>

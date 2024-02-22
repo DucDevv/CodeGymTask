@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday cake candles</title>
+</head>
+<body>
+<script>
+    function birthdayCakeCandles(candles) {
+        // Write your code here
+        let max = 0;
+        let count = 0;
+        for(let i = 0; i < candles.length; i++){
+            if (max < candles[i]) {
+                max = candles[i]
+            }
+        }
+        for(let i = 0; i < candles.length; i++){
+            if (max === candles[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    birthdayCakeCandles();
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <!-- Tính tổng lớn nhất và nhỏ nhất -->
+    <script>
+        let arr = [1, 2, 3, 4, 5]
+        let min = arr[0];
+        let max = arr[0];
+        let maximumSum = 0;
+        let minimumSum = 0;
+        let sum = 0;
+        function minniMaxSum(){
+            for(let i = 0; i < arr.length; i++){
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+                if (min > arr[i]) {
+                    min = arr[i];
+                }
+                sum += arr[i];
+            }
+            let maxSum = sum - min;
+            let minSum = sum - max;
+            console.log(minSum + " " + maxSum);
+        }
+
+        minniMaxSum();
+    </script>
+</body>
+</html>
