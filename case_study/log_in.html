@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/log_in.css">
+    <title>Log in</title>
+</head>
+<body onload="CheckLogin()">
+
+<div class="logo">
+    <a href="home.html"><img src="img/nikelogo.png" alt=""></a>
+</div>
+
+<div class="container">
+    <h1>LOG IN</h1>
+    <form>
+        <p>Username</p>
+        <div class="custom-input">
+            <input type="text" id="username" placeholder="Username" >
+            <i class='bx bx-at'></i>
+        </div>
+        <p>Password</p>
+        <div class="custom-input">
+            <input type="password" id="password" placeholder="Password">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+        <button class="login" onclick="Login()">Login</button>
+        <div class="links">
+            <a href="#">Reset password</a>
+            <a href="sign_up.html">Don't have an account?</a>
+        </div>
+    </form>
+</div>
+<script src="js/log_in.js"></script>
+</body>
+</html>

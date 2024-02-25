@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/sign_up.css">
+    <title>Sign up</title>
+</head>
+
+<body>
+
+<div class="logo">
+    <a href="home.html"><img src="img/nikelogo.png"></a>
+</div>
+
+<div class="container">
+    <img src="img/sign_up.jpg">
+    <form id="mainForm" onsubmit="signUp()" novalidate>
+        <h2>SIGN UP</h2>
+        <div class="form-control">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" autocomplete="off">
+            <i class="icon"></i>
+        </div>
+
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" autocomplete="off">
+            <i class="icon"></i>
+        </div>
+
+        <div class="form-control">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Enter your phone" autocomplete="off">
+            <i class="icon"></i>
+        </div>
+
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" autocomplete="off">
+            <i class="icon"></i>
+        </div>
+
+        <div class="form-control">
+            <label for="confirm-password">Confirm password</label>
+            <input id="confirm-password" placeholder="Confirm password"></input>
+            <i class="icon"></i>
+        </div>
+        <a href="#"><button type="submit">Submit</button></a>
+        <div class="links">
+            <a href="log_in.html">Already have an account?</a>
+        </div>
+    </form>
+</div>
+
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Success!</h2>
+        <p>Your form has been submitted successfully.</p>
+    </div>
+</div>
+
+
+<script src="js/sign_up.js"></script>
+<script src="js/ex_sign_up.js"></script>
+</body>
+
+</html>

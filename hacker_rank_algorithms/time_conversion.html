@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        function timeConversion(s) {
+            let amPm = s.chartAt(8);
+            let militaryHour = "";
+            if (amPm === "A") {
+                if (s.substring(0,2) === "12") {
+                    militaryHour = "0";
+                }
+                else {
+                    militaryHour = s.substring(0,2);
+                }
+            }
+            else {
+                if (s.substring(0,2) === "12") {
+                    militaryHour = s.substring(0,2);
+                }
+                else {
+                    militaryHour = parseInt(s.substring(0,2), 10) + 12;
+                }
+            }
+            return militaryHour + s.substring;
+
+        }
+
+        timeConversion(s);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple array sum</title>
+</head>
+<body>
+<script>
+    let ar = [1,2,3,4,5,6,7];
+    function simpleArraySum(ar) {
+        let sum = 0;
+        for(let i = 0; i < ar.length; i++){
+            sum += ar[i];
+        }
+        return sum;
+    }
+
+    let res = simpleArraySum(ar);
+    console.log(res);
+</script>
+</body>
+</html>
