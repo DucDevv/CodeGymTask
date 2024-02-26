@@ -171,6 +171,7 @@ body {
     border: none;
 }
 /* Home page */
+/* Product details*/
 #product_details .single-product-image {
     width: 35%;
     margin-right: 50px;
@@ -185,6 +186,8 @@ body {
     flex-basis: 24%;
     cursor: pointer;
 }
+
+
 
 /* Footer */
 footer {

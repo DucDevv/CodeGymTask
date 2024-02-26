@@ -14,13 +14,19 @@ const listAccount = [
 ]
 
 function CheckLogin() {
-    if (localStorage.getItem("token") !== undefined) {
+    if (localStorage.getItem("token") !== null) {
         let name = localStorage.getItem("token");
-        let headerSignUp = document.getElementById("header_signup");
-        let headerLogIn = document.getElementById("header_login");
-        headerLogIn.innerHTML = "Hi " + name;
-        headerLogIn.style.fontStyle.bold();
         document.getElementById("header_signup").style.display = "none";
+        document.getElementById("header_login").style.display = "none";
+        document.getElementById("header_logout").style.display = "block";
+        let headerUsername = document.getElementById("header_username");
+        headerUsername.style.display ="block";
+        headerUsername.innerHTML = "Hi " + name;
+    } else if (localStorage.getItem("token") === null) {
+        document.getElementById("header_signup").style.display = "block";
+        document.getElementById("header_login").style.display = "block";
+        document.getElementById("header_logout").style.display = "none";
+        document.getElementById("header_username").style.display = "none";
     }
 }
 
