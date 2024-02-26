@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     password.addEventListener('input', () => {
-        validateField(password, password.value.trim().length >= 8, 'Password must be at least 8 characters');
+        validateField(password, password.value.trim().length >= 6, 'Password must be at least 6 characters');
     });
 
     confirmPassword.addEventListener('input', () => {
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         validateField(name, name.value.trim() !== '', 'Name cannot be blank');
         validateField(email, isEmail(email.value.trim()), 'Not a valid email');
         validateField(phone, isPhone(phone.value.trim()), 'Not a valid phone number');
-        validateField(password, password.value.trim().length >= 8, 'Password must be at least 8 characters');
+        validateField(password, password.value.trim().length >= 6, 'Password must be at least 6 characters');
         validateField(confirmPassword, confirmPassword.value.trim() !== '', 'Confirm password cannot be blank');
 
         document.querySelectorAll('.form-control').forEach((control) => {
