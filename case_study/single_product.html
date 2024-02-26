@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="css/single_product.css">
 </head>
-<body>
+<body onload="CheckLogin()">
 
 <section id="first_header">
     <a href="home.html"><img src="img/nikelogo.png" alt=""></a>
     <nav>
         <ul id="first_navbar">
-            <li><a href="">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="log_in.html">Log In</a></li>
-            <li id="header"><a id="loginLink" href="sign_up.html">Sign Up</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li id="header_login"><a href="log_in.html">Log In</a></li>
+            <li id="header_signup"><a href="sign_up.html">Sign Up</a></li>
+            <li id="header_username"><a href="#"></a></li>
+            <li id="header_logout" ><a onclick="LogOut()" href="#">Log Out</a></li>
         </ul>
     </nav>
 
@@ -47,31 +49,84 @@
 
 <section id="product_details" class="section-p1">
     <div class="single-product-image">
-        <img src="img/shoe.jpg" width="100%" id="main_img" alt="">
+        <img src="img/shoe1.png" width="100%" id="main_img" alt="">
 
         <div class="small-img-group">
             <div class="small-img-col">
-                <img src="img/shoe.jpg" width="100%" class="small-img" alt="">
+                <img src="img/shoe1.png" width="100%" class="small-img" alt="">
             </div>
             <div class="small-img-col">
-                <img src="img/shoe.jpg" width="100%" class="small-img" alt="">
+                <img src="img/shoe3.png" width="100%" class="small-img" alt="">
             </div>
             <div class="small-img-col">
-                <img src="img/shoe.jpg" width="100%" class="small-img" alt="">
+                <img src="img/shoe4.jpg" width="100%" class="small-img" alt="">
             </div>
             <div class="small-img-col">
-                <img src="img/shoe.jpg" width="100%" class="small-img" alt="">
+                <img src="img/shoe5.png" width="100%" class="small-img" alt="">
             </div>
         </div>
     </div>
 
     <div class="single-product-details">
-        <h6>Nike air max 1/97 Sean Wotherspoon</h6>
-        <h4>Men's Shoe</h4>
-        <h2>$781</h2>
-        <input type="number" value="1">
-        <button>Add to cart</button>
+        <h2>Nike air max 1/97 Sean Wotherspoon</h2>
+        <p>Men's Shoe</p>
+        <h3>$781</h3>
+        <h4>Quantity: <input type="number" value="1"></h4>
+        <h4>Select Size
+            <select id="size" name="size">
+                <option value="EU 40">EU 40</option>
+                <option value="EU 41">EU 41</option>
+                <option value="EU 42">EU 42</option>
+                <option value="EU 43">EU 43</option>
+                <option value="EU 44">EU 44</option>
+                <option value="EU 45">EU 45</option>
+            </select>
+        </h4>
+        <button class="add_cart">Add to cart</button>
+        <button class="favorite">Favorite <i class="far fa-heart"></i></button>
     </div>
+</section>
+
+<section id="product1" class="section-p1">
+    <div class="title">
+        <h2>Feature Product</h2>
+        <p>Collection</p>
+    </div>
+
+        <div class="product-container">
+            <div class="product" id="pro">
+                <img src="img/shoe.jpg" alt="">
+                <div class="description">
+                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
+                    <h5>Men's Shoe</h5>
+                    <h4>$781</h4>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/shoe.jpg" alt="">
+                <div class="description">
+                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
+                    <h5>Men's Shoe</h5>
+                    <h4>$781</h4>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/shoe.jpg" alt="">
+                <div class="description">
+                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
+                    <h5>Men's Shoe</h5>
+                    <h4>$781</h4>
+                </div>
+            </div>
+            <div class="product">
+                <img src="img/shoe.jpg" alt="">
+                <div class="description">
+                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
+                    <h5>Men's Shoe</h5>
+                    <h4>$781</h4>
+                </div>
+            </div>
+        </div>
 </section>
 
 <footer class="section-p1">
@@ -105,6 +160,26 @@
 
 </footer>
 
-<script src=""></script>
+<script>
+    let mainImg = document.getElementById("main_img");
+    let smallImg = document.getElementsByClassName("small-img");
+
+    smallImg[0].onclick = function () {
+        mainImg.src = smallImg[0].src;
+    }
+    smallImg[1].onclick = function () {
+        mainImg.src = smallImg[1].src;
+    }
+    smallImg[2].onclick = function () {
+        mainImg.src = smallImg[2].src;
+    }
+    smallImg[3].onclick = function () {
+        mainImg.src = smallImg[3].src;
+    }
+
+</script>
+
+<script src="js/log_in.js"></script>
+<script src="js/log_out.js"></script>
 </body>
 </html>

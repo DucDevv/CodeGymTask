@@ -191,7 +191,7 @@ body {
 #product1 .product-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 10px;
     flex-wrap: wrap;
 }
 
@@ -274,7 +274,7 @@ body {
 /* Left sidebar*/
 #product1 .sidebar {
     width: 2000px;
-    padding: 38px;
+    padding: 20px;
 }
 
 #product1 .sidebar ul {

@@ -9,16 +9,18 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="css/shop.css">
 </head>
-<body>
+<body onload="CheckLogin()">
 
 <section id="first_header">
     <a href="home.html"><img src="img/nikelogo.png" alt=""></a>
     <nav>
         <ul id="first_navbar">
-            <li><a href="">Home</a></li>
-            <li><a href="">Shop</a></li>
-            <li><a href="log_in.html">Log In</a></li>
-            <li id="header"><a id="loginLink" href="sign_up.html">Sign Up</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li id="header_login"><a href="log_in.html">Log In</a></li>
+            <li id="header_signup"><a href="sign_up.html">Sign Up</a></li>
+            <li id="header_username"><a href="#"></a></li>
+            <li id="header_logout" ><a onclick="LogOut()" href="#">Log Out</a></li>
         </ul>
     </nav>
 
@@ -46,7 +48,7 @@
 </section>
 
 <section id="product1" class="section-p1">
-    <div class="product-element">
+    <div class="product-element" onclick="window.location.href = 'single_product.html'">
         <div class="sidebar">
             <ul>
                 <li><h3>Category</h3></li>
@@ -103,7 +105,7 @@
 
         <div class="product-container">
             <div class="product" id="pro">
-                <img src="img/shoe.jpg" alt="">
+                <img src="img/shoe1.png" alt="">
                 <div class="description">
                     <h5>Nike air max 1/97 Sean Wotherspoon</h5>
                     <h3>Men's Shoe</h3>
@@ -216,6 +218,7 @@
 
 </footer>
 
-<script src=""></script>
+<script src="js/log_in.js"></script>
+<script src="js/log_out.js"></script>
 </body>
 </html>
