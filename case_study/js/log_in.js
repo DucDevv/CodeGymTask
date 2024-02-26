@@ -13,14 +13,14 @@ const listAccount = [
     }
 ]
 
-let isLogin = !!localStorage.getItem("token");
-
 function CheckLogin() {
-    if (isLogin) {
+    if (localStorage.getItem("token") !== undefined) {
         let name = localStorage.getItem("token");
-        let headerElement = document.getElementById("header");
-        headerElement.innerHTML = "Hi " + name;
-        document.getElementById("loginLink").style.display = "none";
+        let headerSignUp = document.getElementById("header_signup");
+        let headerLogIn = document.getElementById("header_login");
+        headerLogIn.innerHTML = "Hi " + name;
+        headerLogIn.style.fontStyle.bold();
+        document.getElementById("header_signup").style.display = "none";
     }
 }
 
@@ -30,16 +30,7 @@ function Login() {
     let checkLogin = listAccount.some(value => value.username === username && value.password === password);
     if (checkLogin) {
         localStorage.setItem("token", username);
-        isLogin = true;
-        CheckLogin();
-        window.location.href = "home.html";
     } else {
         alert("Wrong username or password");
-    }
-    if (localStorage.getItem(("token"))) {
-        CheckLogin();
-    }
-    window.onload = function() {
-        CheckLogin();
     }
 }
