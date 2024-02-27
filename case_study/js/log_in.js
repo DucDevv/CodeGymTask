@@ -1,18 +1,5 @@
-const listAccount = [
-    {
-        username: "duc",
-        password: "duc"
-    },
-    {
-        username: "phong",
-        password: "phong"
-    },
-    {
-        username: "quan",
-        password: "quan"
-    }
-]
 
+let listAccount = JSON.parse(localStorage.getItem("account"));
 function CheckLogin() {
     if (localStorage.getItem("token") !== null) {
         let name = localStorage.getItem("token");
@@ -39,4 +26,32 @@ function Login() {
     } else {
         alert("Wrong username or password");
     }
+}
+
+function signUp() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let password = document.getElementById("password").value;
+
+    if (listAccount !== null) {
+        let existingAccount = listAccount.find(account => account.username === name);
+        if (existingAccount) {
+            alert("Username already exists. Please choose a different username.");
+            return;
+        }
+    } else {
+        listAccount = [];
+    }
+
+    let newAccount = {
+        username: name,
+        email: email,
+        phone: phone,
+        password: password
+    };
+
+    listAccount.push(newAccount);
+    alert("Sign up successful!");
+    localStorage.setItem("account", JSON.stringify(listAccount));
 }

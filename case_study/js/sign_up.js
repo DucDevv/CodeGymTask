@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const email = document.getElementById('email');
     const phone = document.getElementById('phone');
     const password = document.getElementById('password');
-    const confirmPassword = document.getElementById('confirm-password');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -30,17 +29,12 @@ document.addEventListener('DOMContentLoaded', function () {
         validateField(password, password.value.trim().length >= 6, 'Password must be at least 6 characters');
     });
 
-    confirmPassword.addEventListener('input', () => {
-        validateField(confirmPassword, confirmPassword.value.trim() !== '', 'Confirm password cannot be blank');
-    });
-
     function checkInputs() {
         let isValid = true;
         validateField(name, name.value.trim() !== '', 'Name cannot be blank');
         validateField(email, isEmail(email.value.trim()), 'Not a valid email');
         validateField(phone, isPhone(phone.value.trim()), 'Not a valid phone number');
         validateField(password, password.value.trim().length >= 6, 'Password must be at least 6 characters');
-        validateField(confirmPassword, confirmPassword.value.trim() !== '', 'Confirm password cannot be blank');
 
         document.querySelectorAll('.form-control').forEach((control) => {
             if (control.classList.contains('error')) {
@@ -83,20 +77,20 @@ document.addEventListener('DOMContentLoaded', function () {
         return /^\+?(\d.*){3,}$/.test(phone);
     }
 
-    function showModal() {
-        const modal = document.getElementById('successModal');
-        modal.style.display = 'block';
-
-        const closeBtn = document.querySelector('.close-button');
-        closeBtn.onclick = function () {
-            modal.style.display = 'none';
-        };
-
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        };
-    }
+    // function showModal() {
+    //     const modal = document.getElementById('successModal');
+    //     modal.style.display = 'block';
+    //
+    //     const closeBtn = document.querySelector('.close-button');
+    //     closeBtn.onclick = function () {
+    //         modal.style.display = 'none';
+    //     };
+    //
+    //     window.onclick = function (event) {
+    //         if (event.target === modal) {
+    //             modal.style.display = 'none';
+    //         }
+    //     };
+    // }
 
 });

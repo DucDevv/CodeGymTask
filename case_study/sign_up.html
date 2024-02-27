@@ -17,7 +17,7 @@
 
 <div class="container">
     <img src="img/sign_up.jpg">
-    <form id="mainForm" onsubmit="signUp()" novalidate>
+    <form id="mainForm" novalidate>
         <h2>SIGN UP</h2>
         <div class="form-control">
             <label for="name">Name</label>
@@ -43,29 +43,24 @@
             <i class="icon"></i>
         </div>
 
-        <div class="form-control">
-            <label for="confirm-password">Confirm password</label>
-            <input id="confirm-password" placeholder="Confirm password"></input>
-            <i class="icon"></i>
-        </div>
-        <a href="#"><button type="submit">Submit</button></a>
+        <a href="#"><button type="submit" onclick="signUp()" >Submit</button></a>
         <div class="links">
             <a href="log_in.html">Already have an account?</a>
         </div>
     </form>
 </div>
 
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>Success!</h2>
-        <p>Your form has been submitted successfully.</p>
-    </div>
-</div>
+<!--<div id="successModal" class="modal">-->
+<!--    <div class="modal-content">-->
+<!--        <span class="close-button">&times;</span>-->
+<!--        <h2>Success!</h2>-->
+<!--        <p>Your form has been submitted successfully.</p>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <script src="js/sign_up.js"></script>
-<script src="js/ex_sign_up.js"></script>
+<script src="js/log_in.js"></script>
 </body>
 
 </html>
