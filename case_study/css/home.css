@@ -53,6 +53,7 @@ body {
 /* Header */
 /* Fist header*/
 #first_header {
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -96,6 +97,7 @@ body {
 
 /* Second header*/
 #second_header {
+    position: sticky;
     display: flex;
     align-items: center;
     justify-content: center;

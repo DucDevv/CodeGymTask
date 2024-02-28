@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nike - shop</title>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
     <link rel="stylesheet" href="css/shop.css">
 </head>
 <body onload="CheckLogin()">
@@ -20,7 +20,7 @@
             <li id="header_login"><a href="log_in.html">Log In</a></li>
             <li id="header_signup"><a href="sign_up.html">Sign Up</a></li>
             <li id="header_username"><a href="#"></a></li>
-            <li id="header_logout" ><a onclick="LogOut()" href="#">Log Out</a></li>
+            <li id="header_logout"><a onclick="LogOut()" href="#">Log Out</a></li>
         </ul>
     </nav>
 
@@ -37,8 +37,8 @@
             <li><a href="">Sales</a></li>
             <li>
                 <form action="" id="search-box">
-                    <input type="text" id="search-text" placeholder="SEARCH">
-                    <button id="search-btn"><i class="far fa-search"></i></button>
+                    <input type="text" id="search-text" placeholder="SEARCH" oninput="searchProduct()">
+                    <button id="search-btn" ><i class="far fa-search"></i></button>
                 </form>
             </li>
             <li><a href=""><i class="far fa-heart"></i></a></li>
@@ -103,79 +103,8 @@
 
         </div>
 
-        <div class="product-container">
-            <div class="product" id="pro">
-                <img src="img/product/shoe1.png" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe6.jpg" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe7.jpg" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe8.jpg" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe9.png" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe10.jpg" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe11.png" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe12.jpg" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
-            <div class="product">
-                <img src="img/product/shoe13.jpg" alt="">
-                <div class="description">
-                    <h5>Nike air max 1/97 Sean Wotherspoon</h5>
-                    <h3>Men's Shoe</h3>
-                    <h4>$781</h4>
-                </div>
-            </div>
+        <div class="product-container" id="search-result">
+
         </div>
     </div>
 </section>
